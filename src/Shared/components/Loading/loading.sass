@@ -1,0 +1,19 @@
+.loading--spinner
+    position: relative
+    margin: auto
+    width: 5rem
+    height: 5rem
+    border: 2px solid #2980B9
+    border-top-color: #F39C12
+    border-radius: 50%
+    animation-name: spin
+    animation-timing-function: ease-in-out
+    animation-iteration-count: infinite
+    animation-duration: 1.5s
+
+@keyframes spin
+    0%
+        transform: rotate(360deg)
+    100%
+        transform: rotate(0deg)
+        
