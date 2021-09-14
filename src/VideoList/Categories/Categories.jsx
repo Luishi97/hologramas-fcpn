@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import useFindAllCategories from '../useFindAllCategories'
+import useFindAllCategories from '../../Shared/functions/useFindAllCategories'
 import CategoryCard from './CategoryCard'
 import Loading from '../../Shared/components/Loading'
 import './categories.sass'

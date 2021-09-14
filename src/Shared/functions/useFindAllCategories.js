@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import firebase from '../Shared/config/firebase'
+import firebase from '../config/firebase'
 
 export default function useFindAllCategories(setCareerList) {
   const careerRef = firebase.firestore().collection('career')

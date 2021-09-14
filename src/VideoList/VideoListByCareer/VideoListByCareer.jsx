@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { VideoItem } from './VideoItem'
-import useFindAllVideos from '../useFindAllVideos'
 import './videoList.sass'
+import useFindAllVideos from '../../Shared/functions/useFindAllVideos'
+import useDelteVideo from './useDeleteVideo'
 
 export const VideoListByCareer = ({ carrerSelected }) => {
   const [videoList, setVideoList] = useState()
+  const deleteVideo = useDelteVideo()
 
   useFindAllVideos(setVideoList, carrerSelected)
 
@@ -15,7 +17,9 @@ export const VideoListByCareer = ({ carrerSelected }) => {
     return (
       <div className="video_container">
         {videoList.length > 0 ? (
-          videoList.map((career, index) => <VideoItem {...career} key={index} />)
+          videoList.map((career, index) => (
+            <VideoItem {...career} key={index} onDelete={deleteVideo} />
+          ))
         ) : (
           <p className="video_error">No existen videos</p>
         )}
