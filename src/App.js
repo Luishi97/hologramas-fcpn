@@ -1,8 +1,8 @@
 import { Router } from '@reach/router'
 
 import VideoList from './VideoList'
-import './Shared/sass/main.sass'
 import VideoUp from './VideoUp/VideoUp'
+import './Shared/sass/main.sass'
 
 function App() {
   return (
